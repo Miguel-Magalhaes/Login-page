@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("assets/imagem-fundo.jpg");
+    background-size: cover;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.divisao-principal {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+}
+
+.lado-esquerdo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 0 0 0 6%;
+    max-width: 45%;
+}
+
+.titulo-lado-esquerdo {
+    font-size: 5em;
+    color: #ffffff;
+}
+
+.texto-lado-esquerdo {
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+.texto-creditos {
+    margin: 7% 0 0 2%;
+    color: #ffffff;
+    font-weight: 200;
+}
+
+.texto-creditos strong {
+    font-style: italic;
+    font-weight: 200;
+}
+
+.lado-direito {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 5%;
+    width: 30%;
+    gap: 12px;
+}
+
+.titulo-lado-direito {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #A6AEBF;
+    border: 1px #243761 solid;
+    width: 45%;
+    padding: 1.5%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-google img {
+    display: block;
+}
+
+.btn-google strong {
+    color: #122349;
+    font-weight: 400;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(166, 174, 191, 0.6);
+    border: 1px #243761 solid;
+    width: 15%;
+    padding: 1.5%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.divisao-linha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0; 
+}
+
+.linha {
+    flex: 1;
+    height: 1px;
+    background-color: #ffffff;
+    height: 1.2px; 
+}
+
+.divisao-linha p {
+    color: #ffffff; 
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.inputs-primeira-linha, .inputs-segunda-linha {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.inputs-primeira-linha p {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin: 0 0 4% 7%;
+}
+
+.inputs-segunda-linha p {
+    color: #ffffff;
+    font-size: 1.1em;
+    margin: 0 0 4% 7%;
+}
+
+.input-nome, .input-email, .input-senha {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 50%;
+}
+
+input {
+    background-color: #A6AEBF;
+    border: 1.3px #243761 solid;
+    border-radius: 23px;
+    padding: 6%;
+    opacity: 0.8;
+}
+
+.btn-signin {
+    background-color: #A6AEBF;
+    padding: 2.5%;
+    width: 50%;
+    border-radius: 20px;
+    border: 1px #243761 solid;
+    margin: 6% 0 0 8%;
+    cursor: pointer;
+}
+
+.btn-signin strong {
+    color: #122349;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.btn-signin:hover, .btn:hover, .btn-google:hover {
+    background-color: #707d9c;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.switch .switch-text {
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+.switch .switch-wrapper {
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    position: relative;
+}
+
+.switch .switch-wrapper .switch-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 1px #122349 solid;
+    background-color: #A6AEBF;
+}
+
+.switch .switch-wrapper input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .switch-wrapper .switch-button::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    transition: .3s all ease;
+    background-color: #122349;
+}
+
+.switch .switch-wrapper input:checked + .switch-button {
+    background-color: #122349;
+}
+
+.switch .switch-wrapper input:checked + .switch-button::before {
+    transform: translate(15px);
+    background-color: #A6AEBF;
+}
+.btn-alterar-fundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Tamanho do botão */
+    height: 40px;
+    border-radius: 50%; /* Torna o botão circular */
+    border: 1px solid #243761; /* Cor da borda */
+    background-color: #A6AEBF; /* Cor de fundo */
+    color: #243761; /* Cor da seta */
+    font-size: 20px; /* Tamanho da seta */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    opacity: 0.8;
+    position: fixed;
+    right: 6%;
+    top: 50%;
+}
+
+.btn-alterar-fundo:hover {
+    background-color: #707d9c; /* Tom mais escuro ao passar o mouse */
+    transform: scale(1.1); /* Efeito de leve crescimento */
+}
+
+@media(max-width: 1100px) {
+    .titulo-lado-esquerdo{
+        font-size: 4em;
+    }
+
+    .texto-lado-esquerdo{
+        font-size: 1.1em;
+    }
+
+    .lado-esquerdo{
+        margin: 0 0 0 6%;
+        max-width: 35%;
+    }
+
+    .lado-direito{
+        width: 40%;
+        margin-left: 6%;
+    }
+}
+
+@media(max-width: 880px){
+    .divisao-principal{
+        gap: 10px;
+    }
+
+    .lado-direito{
+        max-width: 37%;
+        margin: 7% 0 0 4%;
+    }
+
+    .titulo-lado-esquerdo{
+        margin-top: 5%;
+        font-size: 3em;
+    }
+
+    .texto-lado-esquerdo{
+        font-size: 1em;
+    }
+
+    .texto-creditos{
+        font-size: 0.8em;
+        margin: 4% 0 0 0;
+    }
+
+    .titulo-lado-direito{
+        font-size: 1.4em;
+    }
+
+    .btn-google{
+        width: 40%;
+        gap: 4px;
+    }
+
+    .btn-google strong{
+        font-size: 0.8em;
+    }
+
+    .btn-google img{
+        height: 13px;
+    }
+
+    .btn{
+        width: 10%;
+    }
+
+    .btn img{
+        height: 13px;
+    }
+
+    .linha {
+        height: 1px; 
+    }
+    
+    .divisao-linha p {
+        font-size: 1em;
+    }
+
+    .inputs{
+        gap: 35px;
+    }
+
+    .inputs-primeira-linha p {
+        font-size: 0.9em;
+        margin: 0 0 1% 7%;
+    }
+    
+    .inputs-segunda-linha p {
+        font-size: 0.9em;
+        margin: 0 0 1% 7%;
+    }
+
+    input {
+        padding: 4%;
+    }
+
+    .switch .switch-wrapper {
+        width: 37px;
+        height: 22px;
+    }
+
+    .switch .switch-wrapper .switch-button::before{
+        width: 12px;
+        height: 12px;
+    }
+
+    .switch .switch-text{
+        font-size: 0.75em;
+    }
+
+    .btn-signin {
+        padding: 1.5%;
+        width: 40%;
+    }
+
+    .btn-signin strong {
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 730px) {
+    .lado-esquerdo{
+        max-width: 30%;
+    }
+
+    .titulo-lado-esquerdo{
+        font-size: 2.3em;
+    }
+
+    .texto-lado-esquerdo{
+        font-size: 0.85em;
+    }
+
+    .lado-direito{
+        max-width: 40%;
+    }
+
+    .btn-google{
+        width: 50%;
+    }
+
+    .inputs-primeira-linha p {
+        font-size: 0.7em;
+        margin: 0 0 1% 7%;
+    }
+    
+    .inputs-segunda-linha p {
+        font-size: 0.7em;
+        margin: 0 0 1% 7%;
+    }
+
+    input {
+        padding: 3%;
+    }
+
+    .switch .switch-text{
+        font-size: 0.7em;
+    }
+}
+
+/*@media(max-width: 530px) {
+    .divisao-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 12%;
+    }
+
+    .titulo-lado-esquerdo{
+        font-size: 3em;
+    }
+
+    .texto-lado-esquerdo{
+        font-size: 1em;
+    }
+
+    .texto-creditos{
+        text-align: right;
+        font-size: 0.7em;
+        margin: 0;
+    }
+
+    .lado-esquerdo{
+        margin: 15% 0 0 4%;
+        max-width: 80%;
+    }
+
+    .lado-direito{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 5% 0 0 0;
+    }
+
+    .titulo-lado-direito{
+        font-size: 1.5em;
+        margin-left: 19%;
+    }
+
+    .btn-google{
+        width: 100%;
+    }
+
+    .btn-signin{
+        width: 100%;
+    }
+
+    .botoes{
+        gap: 20px;
+    }
+}*/
